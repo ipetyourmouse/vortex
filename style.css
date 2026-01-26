@@ -1,0 +1,846 @@
+/* ============================================
+   CSS Variables for Color Scheme
+   ============================================ */
+:root {
+    --deep-blue: #0a1929;
+    --teal: #00bcd4;
+    --electric-orange: #ff6b35;
+    --electric-cyan: #00ffff;
+    --dark-bg: #0d1b2a;
+    --dark-overlay: rgba(13, 27, 42, 0.85);
+    --text-light: #ffffff;
+    --text-gray: #b0bec5;
+    --accent-blue: #1976d2;
+}
+
+/* ============================================
+   Reset & Base Styles
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-light);
+    background-color: var(--dark-bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 25, 41, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--electric-cyan);
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--electric-cyan);
+}
+
+.nav-link.cta-button {
+    background: linear-gradient(135deg, var(--electric-orange), var(--electric-cyan));
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    color: var(--dark-bg);
+    font-weight: 700;
+}
+
+.nav-link.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    gap: 4px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-overlay);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.hero-headline {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-light);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subheadline {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-gray);
+    font-weight: 400;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--electric-orange), var(--electric-cyan));
+    color: var(--dark-bg);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(0, 255, 255, 0.6);
+}
+
+/* ============================================
+   Section Styles
+   ============================================ */
+section {
+    padding: 5rem 0;
+}
+
+.section-headline {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--electric-cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.center-headline {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.section-body strong {
+    color: var(--electric-cyan);
+    font-weight: 600;
+}
+
+/* Two Column Grid */
+.two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.column {
+    width: 100%;
+}
+
+.text-column {
+    padding: 1rem;
+}
+
+.image-column {
+    position: relative;
+}
+
+.rounded-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+.shadow-image {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   Vision Section
+   ============================================ */
+.vision-section {
+    background-color: var(--deep-blue);
+}
+
+/* ============================================
+   Experience Section
+   ============================================ */
+.experience-section {
+    background-color: var(--dark-bg);
+}
+
+.ar-overlay-container {
+    position: relative;
+}
+
+.ar-target-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+}
+
+.target-icon {
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(0, 255, 255, 0.6);
+    border-radius: 50%;
+    position: relative;
+}
+
+.target-icon::before,
+.target-icon::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.6);
+}
+
+.target-icon::before {
+    width: 3px;
+    height: 60%;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.target-icon::after {
+    width: 60%;
+    height: 3px;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.stat-box {
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.2), rgba(0, 255, 255, 0.2));
+    border: 2px solid var(--electric-cyan);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-text {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    text-align: center;
+    margin: 0;
+}
+
+.stat-text strong {
+    color: var(--electric-cyan);
+    font-size: 1.4rem;
+}
+
+/* ============================================
+   Built For You Section
+   ============================================ */
+.built-for-you-section {
+    background-color: var(--deep-blue);
+}
+
+.path-overlay-container {
+    position: relative;
+}
+
+.path-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.path-graphic {
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================
+   Market Potential Section
+   ============================================ */
+.potential-section {
+    background-color: var(--dark-bg);
+}
+
+.subsection-headline {
+    font-size: 2rem;
+    color: var(--electric-orange);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.chart-container {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: rgba(10, 25, 41, 0.6);
+    border-radius: 10px;
+}
+
+/* Horizontal Bar Chart (TAM/SAM/SOM) */
+.bar-chart-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bar-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+.bar-wrapper {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: var(--dark-bg);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.tam-bar {
+    background: linear-gradient(90deg, var(--accent-blue), var(--teal));
+}
+
+.sam-bar {
+    background: linear-gradient(90deg, var(--electric-orange), #ff8c42);
+}
+
+.som-bar {
+    background: linear-gradient(90deg, var(--electric-cyan), #4dd0e1);
+    min-width: 2px;
+}
+
+/* Vertical Bar Chart (Financials) */
+.bar-chart-vertical {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    min-height: 300px;
+    position: relative;
+}
+
+.chart-y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    padding-bottom: 30px;
+}
+
+.y-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+.chart-bars-container {
+    flex: 1;
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.break-even-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 66.67%;
+    height: 2px;
+    background-color: var(--text-light);
+    z-index: 1;
+}
+
+.break-even-line::before {
+    content: 'Break-even';
+    position: absolute;
+    left: -80px;
+    top: -8px;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+.vertical-bars {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.vertical-bar-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vertical-bar {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5px;
+    position: relative;
+    transition: height 0.5s ease;
+    min-height: 20px;
+}
+
+.bar-negative {
+    background: linear-gradient(180deg, #d32f2f, #f44336);
+}
+
+.bar-negative-orange {
+    background: linear-gradient(180deg, var(--electric-orange), #ff8c42);
+}
+
+.bar-positive {
+    background: linear-gradient(180deg, #4caf50, #66bb6a);
+}
+
+.bar-value {
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.bar-year {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    font-weight: 600;
+    text-align: center;
+}
+
+.chart-caption {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--text-gray);
+    font-style: italic;
+    text-align: center;
+}
+
+/* ============================================
+   CTA Section
+   ============================================ */
+.cta-section {
+    background-color: var(--deep-blue);
+    padding: 6rem 0;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-product-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 50px rgba(0, 255, 255, 0.3);
+}
+
+.cta-headline {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--electric-cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cta-subheadline {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 2.5rem;
+}
+
+.cta-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#emailInput {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--electric-cyan);
+    border-radius: 30px;
+    color: var(--text-light);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#emailInput:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--electric-orange);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+#emailInput::placeholder {
+    color: var(--text-gray);
+}
+
+.btn-submit {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--electric-orange), var(--electric-cyan));
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    display: none;
+}
+
+.form-message.success {
+    background-color: rgba(76, 175, 80, 0.2);
+    border: 2px solid #4caf50;
+    color: #4caf50;
+    display: block;
+}
+
+.form-message.error {
+    background-color: rgba(244, 67, 54, 0.2);
+    border: 2px solid #f44336;
+    color: #f44336;
+    display: block;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    background-color: var(--dark-bg);
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-link {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--electric-cyan);
+}
+
+.footer-link i {
+    font-size: 1.5rem;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    /* Navigation */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(10, 25, 41, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link.cta-button {
+        margin-top: 1rem;
+    }
+
+    /* Hero */
+    .hero-headline {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-subheadline {
+        font-size: 1.2rem;
+    }
+
+    /* Sections */
+    .section-headline {
+        font-size: 2rem;
+    }
+
+    .two-column-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .reverse-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* Charts */
+    .bar-chart-vertical {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .chart-y-axis {
+        display: none;
+    }
+
+    .break-even-line::before {
+        display: none;
+    }
+
+    .vertical-bars {
+        flex-direction: row;
+        height: 250px;
+    }
+
+    .vertical-bar {
+        min-height: 30px;
+    }
+
+    .bar-value {
+        font-size: 0.75rem;
+    }
+
+    .bar-year {
+        font-size: 0.75rem;
+    }
+
+    /* CTA Form */
+    .form-group {
+        flex-direction: column;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-headline {
+        font-size: 2rem;
+    }
+
+    .hero-subheadline {
+        font-size: 1rem;
+    }
+
+    .section-headline {
+        font-size: 1.75rem;
+    }
+
+    .subsection-headline {
+        font-size: 1.5rem;
+    }
+
+    .cta-headline {
+        font-size: 2rem;
+    }
+}
