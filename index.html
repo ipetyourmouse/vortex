@@ -120,27 +120,21 @@
                 <div class="column">
                     <h3 class="subsection-headline">A $1 Trillion Inertia Economy Awaits.</h3>
                     <div class="chart-container">
-                        <div class="bar-chart-horizontal">
-                            <!-- TAM Bar -->
-                            <div class="bar-item">
-                                <div class="bar-label">Total Addressable Market: HKD 956B</div>
-                                <div class="bar-wrapper">
-                                    <div class="bar tam-bar" style="width: 100%;"></div>
-                                </div>
+                        <div class="circles-chart">
+                            <!-- TAM Circle (Outermost) -->
+                            <div class="circle tam-circle">
+                                <span class="circle-label">TAM</span>
+                                <span class="circle-value">HKD 956B</span>
                             </div>
-                            <!-- SAM Bar -->
-                            <div class="bar-item">
-                                <div class="bar-label">Serviceable Market: HKD 52.7B</div>
-                                <div class="bar-wrapper">
-                                    <div class="bar sam-bar" style="width: 5.5%;"></div>
-                                </div>
+                            <!-- SAM Circle (Middle) -->
+                            <div class="circle sam-circle">
+                                <span class="circle-label">SAM</span>
+                                <span class="circle-value">HKD 52.7B</span>
                             </div>
-                            <!-- SOM Bar -->
-                            <div class="bar-item">
-                                <div class="bar-label">Serviceable Obtainable Market (5-year): HKD 2.63B</div>
-                                <div class="bar-wrapper">
-                                    <div class="bar som-bar" style="width: 0.275%;"></div>
-                                </div>
+                            <!-- SOM Circle (Innermost) -->
+                            <div class="circle som-circle">
+                                <span class="circle-label">SOM</span>
+                                <span class="circle-value">HKD 2.63B</span>
                             </div>
                         </div>
                     </div>
@@ -156,44 +150,63 @@
                                 <div class="y-label">10</div>
                                 <div class="y-label">5</div>
                                 <div class="y-label">0</div>
-                                <div class="y-label">-5</div>
+                                <div class="y-label">-2</div>
                             </div>
                             <div class="chart-bars-container">
                                 <div class="break-even-line"></div>
+                                <div class="chart-grid-lines">
+                                    <div class="grid-line"></div>
+                                    <div class="grid-line"></div>
+                                    <div class="grid-line"></div>
+                                    <div class="grid-line"></div>
+                                    <div class="grid-line"></div>
+                                </div>
                                 <div class="vertical-bars">
                                     <div class="vertical-bar-item">
-                                        <div class="vertical-bar bar-negative" style="height: 17.73%;" data-value="-2.34">
-                                            <span class="bar-value">-2.34</span>
+                                        <div class="vertical-bar-wrapper">
+                                            <div class="vertical-bar bar-negative" style="height: 23.4%;" data-value="-2.34">
+                                                <span class="bar-value">-2.34</span>
+                                            </div>
                                         </div>
                                         <div class="bar-year">Year 1</div>
                                     </div>
                                     <div class="vertical-bar-item">
-                                        <div class="vertical-bar bar-negative-orange" style="height: 31.33%;" data-value="-0.3">
-                                            <span class="bar-value">-0.3</span>
+                                        <div class="vertical-bar-wrapper">
+                                            <div class="vertical-bar bar-negative-orange" style="height: 3%;" data-value="-0.3">
+                                                <span class="bar-value">-0.3</span>
+                                            </div>
                                         </div>
                                         <div class="bar-year">Year 2</div>
                                     </div>
                                     <div class="vertical-bar-item">
-                                        <div class="vertical-bar bar-positive" style="height: 58%;" data-value="3.7">
-                                            <span class="bar-value">3.7</span>
+                                        <div class="vertical-bar-wrapper">
+                                            <div class="vertical-bar bar-positive" style="height: 37%;" data-value="3.7">
+                                                <span class="bar-value">3.7</span>
+                                            </div>
                                         </div>
                                         <div class="bar-year">Year 3</div>
                                     </div>
                                     <div class="vertical-bar-item">
-                                        <div class="vertical-bar bar-positive" style="height: 68%;" data-value="5.2">
-                                            <span class="bar-value">5.2</span>
+                                        <div class="vertical-bar-wrapper">
+                                            <div class="vertical-bar bar-positive" style="height: 52%;" data-value="5.2">
+                                                <span class="bar-value">5.2</span>
+                                            </div>
                                         </div>
                                         <div class="bar-year">Year 4</div>
                                     </div>
                                     <div class="vertical-bar-item">
-                                        <div class="vertical-bar bar-positive" style="height: 82%;" data-value="7.3">
-                                            <span class="bar-value">7.3</span>
+                                        <div class="vertical-bar-wrapper">
+                                            <div class="vertical-bar bar-positive" style="height: 73%;" data-value="7.3">
+                                                <span class="bar-value">7.3</span>
+                                            </div>
                                         </div>
                                         <div class="bar-year">Year 5</div>
                                     </div>
                                     <div class="vertical-bar-item">
-                                        <div class="vertical-bar bar-positive" style="height: 100%;" data-value="10.2">
-                                            <span class="bar-value">10.2</span>
+                                        <div class="vertical-bar-wrapper">
+                                            <div class="vertical-bar bar-positive" style="height: 102%;" data-value="10.2">
+                                                <span class="bar-value">10.2</span>
+                                            </div>
                                         </div>
                                         <div class="bar-year">Year 6</div>
                                     </div>
@@ -228,13 +241,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="copyright">&copy; 2023 Spectra Vision</p>
-            <div class="footer-links">
-                <a href="#" class="footer-link">Privacy Policy</a>
-                <a href="#" class="footer-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="footer-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="footer-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
+            <p class="copyright">&copy; 2026 Spectra Vision</p>
         </div>
     </footer>
 
