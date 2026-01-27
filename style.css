@@ -211,6 +211,38 @@ h1, h2, h3 {
 }
 
 /* ============================================
+   Video Styles
+   ============================================ */
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Update Hero Section video specifically */
+.hero-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Update Experience Section video */
+.experience-section .image-column video {
+    width: 100%;
+    max-width: 600px; /* Reasonable size */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Update the image-column to center the video */
+.experience-section .image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
    Section Styles
    ============================================ */
 section {
